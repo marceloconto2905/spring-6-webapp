@@ -27,7 +27,7 @@ public class BootStrapData implements CommandLineRunner {
 
         Author author = new Author();
         author.setFirstName("Marcelo");
-        author.setLasttName("Argentoni");
+        author.setLastName("Argentoni");
 
         Author savedAuthor = authorRepository.save(author);
 

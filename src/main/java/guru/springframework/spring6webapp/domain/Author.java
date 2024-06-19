@@ -3,7 +3,6 @@ package guru.springframework.spring6webapp.domain;
 import jakarta.persistence.*;
 
 import java.util.HashSet;
-import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -14,7 +13,7 @@ public class Author {
     private Long id;
 
     private String firstName;
-    private String lasttName;
+    private String lastName;
 
     @ManyToMany(mappedBy = "authors")
     private Set<Book> books = new HashSet<>();
@@ -27,12 +26,12 @@ public class Author {
         this.books = books;
     }
 
-    public String getLasttName() {
-        return lasttName;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setLasttName(String lasttName) {
-        this.lasttName = lasttName;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
     }
 
     public String getFirstName() {
@@ -56,7 +55,7 @@ public class Author {
         return "Author{" +
                 "id=" + id +
                 ", firstName='" + firstName + '\'' +
-                ", lasttName='" + lasttName + '\'' +
+                ", lasttName='" + lastName + '\'' +
                 ", books=" + books +
                 '}';
     }
